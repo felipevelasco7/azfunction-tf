@@ -5,6 +5,6 @@ variable "name_function" {
 
 variable "location" {
   type        = string
-  default     = "West Europe"
+  default     = "East US 2"
   description = "Location"
 }
