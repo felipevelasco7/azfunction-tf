@@ -48,6 +48,17 @@ terraform apply
 
 Finalmente, se ejecutó el despliegue de la infraestructura en la nube de Azure, creando los recursos definidos en los archivos de Terraform.
 
+6. Error de location
+Habia un error en el despliegue por la zona, entonces en el archivo variables.tf cambie esta parte del codigo:
+```bash
+
+variable "location" {
+  type        = string
+  default     = "East US 2"
+  description = "Location"
+}
+```
+
 # Con estos pasos se logró desplegar una Function App en Azure de manera automatizada mediante Terraform, aplicando los principios de Infraestructura como Código (IaC) y asegurando la reproducibilidad de la infraestructura.
 
 url = "https://felipemiprimerafuncion.azurewebsites.net/api/felipemiprimerafuncion"
